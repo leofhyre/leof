@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  font-size: 17px;
+}
+
+/* Reset styles */
+body, h1, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header styling */
+header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: linear-gradient(to right, orange, green);
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* Logo styling */
+.logo img {
+  width: 50px;
+  padding-top: 5px;
+}
+
+/* Navigation menu styling */
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu ul li a:hover {
+  color: #00bcd4;
+  text-shadow: 2px 2px 2px gray;
+}
+
+/* Banner styling */
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  padding: 50px;
+}
+
+/* Sections with and without borders */
+.with-border, .no-border {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.with-border td, .no-border .column {
+  flex: 1;
+  padding: 30px;
+}
+
+
+.with-border marquee img {
+  height: 200px;
+}
+
+/* Video section */
+.video-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+  padding: 3%;
+  margin: 0 5%;
+}
+
+.video-section .column {
+  flex: 1 1 calc(25% - 20px); /* Allow columns to resize */
+  padding: 3%;
+}
+
+.video-section video {
+  width: 100%;
+  border-radius: 0%;
+  box-shadow: 8px 8px 8px gray;
+}
+
+/* Organization styling */
+.organization {
+  text-align: center;
+  margin: 0 5%;
+}
+
+.organization img {
+  max-width: 100%;
+  height: auto;
+}
+
+.company-logo {
+  text-align: center;
+  align-items: center;
+  padding: 1% 0;
+  margin: 0 5%;
+  font-size: 40px;
+  color: darkgreen;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px gray;
+}
+
+.profile-title{
+  font-size: 50px;
+  font-weight: bold;
+  color: darkgreen;
+  margin: 0 5%;
+}
+
+
+/* Members styling */
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  padding: 1% 0;
+  margin: 0 5%;
+}
+
+.members .pic{
+  text-align: center;
+  flex: 1 1 calc(25% - 20px); /* Allow columns to resize */
+  padding-left: 20%;
+}
+
+.members img{
+  box-shadow: 2px 2px 2px gray;
+}
+
+.members .mem-details{
+  text-align: left;
+  flex: 1 1 calc(25% - 20px); /* Allow columns to resize */
+  padding-right: 20%;
+}
+
+/* Screenshots styling */
+.screenshots {
+  margin: 0 5%;
+  padding: 3%;
+}
+
+.screenshots img {
+  height: 200px;
+}
+
+/* Aim styling */
+.aim-section{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.aim-section .column{
+  flex: 1 1 200px; /* Allow resizing */
+  padding: 3%;
+  align-content: center;
+}
+
+/* Aim styling */
+.map-section{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.map-section .column{
+  flex: 1 1 200px; /* Allow resizing */
+  padding: 3%;
+  align-content: center;
+}
+
+/* Footer styling */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, orange, green);
+  padding: 20px;
+  gap: 20px;
+  text-align: center;
+}
+
+footer .column {
+  flex: 1 1 200px; /* Allow resizing */
+  padding: 10px;
+  align-content: center;
+}
+
+/* Animations */
+h1 {
+  animation: slideIn 3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-20%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+  header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .menu ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .banner {
+      height: 200px;
+  }
+
+  .with-border, .no-border {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .with-border td, .no-border .column {
+      padding: 10px;
+  }
+
+  .video-section .column {
+      flex: 1 1 100%; /* Full width for smaller screens */
+  }
+
+  footer {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+      padding: 10px;
+  }
+
+  .menu ul {
+      font-size: 14px;
+  }
+
+  .logo img {
+      width: 40px;
+  }
+
+  .video-section video {
+      max-width: 300px;
+  }
+}
