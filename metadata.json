@@ -1,0 +1,6 @@
+{
+  "name": "FeudDeck Studio",
+  "description": "Custom Family Feud PowerPoint (.pptx) builder and live game show presenter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
